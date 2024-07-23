@@ -1,40 +1,47 @@
 ---
 title: "AE 01: Meet the penguins"
-author: "Mine Cetinkaya-Rundel"
+author: "Greg Chism"
 format: html
 editor: visual
+jupyter: python3
 ---
 
-For this application exercise, we'll use the tidyverse and palmerpenguins packages.
+For this application exercise, we'll use the pandas and palmerpenguins packages.
 
-```{r}
+```{python}
 #| label: load-packages
 
-library(tidyverse)
-library(palmerpenguins)
+import pandas as pd
+from palmerpenguins import load_penguins
+```
+
+First, let's read in the data.
+
+```{python}
+penguins = load_penguins()
 ```
 
 The dataset we will visualize is called `penguins`.
-Let's `glimpse()` at it.
+Let's `.info()` at it.
 
-```{r}
+```{python}
 2 * 4
 ```
 
--   **Your turn:** Replace `#add code here` with the code for "glimpse"ing at the data `penguins` data frame – `glimpse(penguins)`. Render the document and view the output.
+-   **Your turn:** Replace `#add code here` with the code for "info"ing at the data `penguins` data frame – `penguins.info()`. Render the document and view the output.
 
-```{r}
-#| label: glimpse-penguins
+```{python}
+#| label: info-penguins
 
 # add code here
 ```
 
 -   **Demo:** First, replace the blank below with the number of rows in the `penguins` data frame based on the output of the chunk below. Then, replace it with "inline code" and render again.
 
-```{r}
-#| label: nrow-penguins
+```{python}
+#| label: len-penguins
 
-nrow(penguins)
+len(penguins)
 ```
 
 There are 344 penguins in the `penguins` data frame.
